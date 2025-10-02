@@ -86,7 +86,7 @@ cat health_check.log
 Server is reachable.
 Web service on port 80 is UP.
 Disk usage on / is 37%.
-Results logged to health_coba.log
+Results logged to health_check.log
 ```
 
 
