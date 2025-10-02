@@ -54,4 +54,41 @@ echo "Disk usage on / is $DISK_USAGE." | tee -a "$LOGFILE"
 echo "Results logged to $LOGFILE"
 
 ```
+## Cara Menjalankan Script
+
+### 1. File akan langsung disimpan dengan nama health_check.sh
+### 2. Beri permission agar script bisa dieksekusi:
+```bash
+chmod +x health_check.sh
+```
+### 3. Script dijalankan dengan parameter hostname/IP dan port:
+```bash
+./health_check.sh localhost 80
+```
+
+## Output
+### Output di terminal:
+```
+Server is reachable.
+Web service on port 80 is UP.
+Disk usage on / is 37%.
+Results logged to health_coba.log
+```
+
+### Coba Cek isi file log
+Dengan menjalankan command
+```
+cat health_check.log
+```
+### Dengan Hasil :
+
+===== Health Check pada 2025-10-02 07:15:21 =====
+Server is reachable.
+Web service on port 80 is UP.
+Disk usage on / is 37%.
+Results logged to health_coba.log
+
+
+
+
 
