@@ -81,12 +81,13 @@ Dengan menjalankan command
 cat health_check.log
 ```
 ### Dengan Hasil :
-
+```
 ===== Health Check pada 2025-10-02 07:15:21 =====
 Server is reachable.
 Web service on port 80 is UP.
 Disk usage on / is 37%.
 Results logged to health_coba.log
+```
 
 
 
