@@ -1,16 +1,22 @@
-Challenge 1: Bash Scripting - Server Health Check
-Deskripsi
+# Challenge 1: Bash Scripting - Server Health Check
 
-Challenge ini bertujuan untuk membuat bash script sederhana yang dapat melakukan server health check secara otomatis.
+## Deskripsi
+Challenge ini bertujuan untuk membuat **bash script** sederhana yang dapat melakukan *server health check* secara otomatis.  
 Script akan melakukan pengecekan konektivitas server, status layanan web, serta penggunaan disk, kemudian hasilnya akan dicatat ke dalam file log.
 
-Bash Script
+---
 
-Buat file script baru dan isi dengan kode berikut:
+## Langkah Pengerjaan
 
+### 1. Buat file script
+```bash
+nano health_check.sh
+```
+### 2. Isi script berikut
+```bash
 #!/bin/bash
 
-LOGFILE="health_coba.log"
+LOGFILE="health_check.log"
 TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
 
 # --- Error handling untuk argumen ---
@@ -47,33 +53,5 @@ echo "Disk usage on / is $DISK_USAGE." | tee -a "$LOGFILE"
 
 echo "Results logged to $LOGFILE"
 
-Cara Menjalankan Script
+```
 
-Simpan file dengan nama health_check.sh
-
-Beri permission agar script bisa dieksekusi:
-
-chmod +x health_check.sh
-
-
-Jalankan script dengan parameter hostname/IP dan port:
-
-./health_check.sh localhost 80
-
-Contoh Output
-
-Output di terminal:
-
-Server is reachable.
-Web service on port 80 is UP.
-Disk usage on / is 37%.
-Results logged to health_coba.log
-
-
-Isi file log (cat health_coba.log):
-
-===== Health Check pada 2025-10-02 07:15:21 =====
-Server is reachable.
-Web service on port 80 is UP.
-Disk usage on / is 37%.
-Results logged to health_coba.log
